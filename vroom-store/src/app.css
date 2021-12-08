@@ -1,0 +1,7 @@
+@font-face {
+   font-family: header font;
+   src: url(./assets/fonts/FerroRosso.ttf);
+}
+body {
+   margin: 0;
+}
