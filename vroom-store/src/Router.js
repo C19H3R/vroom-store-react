@@ -1,6 +1,7 @@
 import React from "react";
+import ProductsPage from "./pages/ProductsPage";
 function Router() {
-   return <span>Router</span>;
+   return <ProductsPage />;
 }
 
 export default Router;
