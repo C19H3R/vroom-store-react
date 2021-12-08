@@ -44,21 +44,29 @@ const CardBtn = styled.div`
    justify-content: center;
    align-items: center;
    &:hover {
-      background-color: red;
+      background-color: black;
+      border-radius: 18px;
+      cursor: pointer;
    }
    &:hover img {
-      background-color: gold;
-      border-radius: 50%;
+      background-color: white;
+      border-radius: 18px;
+      filter: invert(100);
    }
    &:hover span {
-      width: auto;
+      visibility: visible;
+   }
+   &:hover > span {
+      width: 125px;
    }
 `;
 const BtnLabel = styled.span`
    margin-left: 5px;
-
    width: 0px;
-   transition: width 2s linear;
+   white-space: nowrap;
+   visibility: hidden;
+   transition: width 200ms linear;
+   color: white;
 `;
 
 const CardBtnIcon = styled.img`
@@ -79,15 +87,15 @@ function ProductCard({ id }) {
             <CardButtonsContainer>
                <CardBtn>
                   <CardBtnIcon src={infoIcon} />
-                  {/* <BtnLabel>Info</BtnLabel> */}
+                  <BtnLabel>Info</BtnLabel>
                </CardBtn>
                <CardBtn>
                   <CardBtnIcon src={cartIcon} />
-                  {/* <BtnLabel>Add To Cart</BtnLabel> */}
+                  <BtnLabel>Add To Cart</BtnLabel>
                </CardBtn>
                <CardBtn>
                   <CardBtnIcon src={wishlistFilledIcon} />
-                  {/* <BtnLabel>Wishlist</BtnLabel> */}
+                  <BtnLabel>Wishlist</BtnLabel>
                </CardBtn>
             </CardButtonsContainer>
          </InfoDiv>

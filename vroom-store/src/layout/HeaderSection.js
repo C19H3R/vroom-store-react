@@ -6,6 +6,7 @@ import HeaderWrapper from "../styledComponents/HeaderWrapper";
 import logoIcon from "../assets/svg/Logo.svg";
 import cartIcon from "../assets/svg/CartIcon.svg";
 import wishlistIcon from "../assets/svg/WishlistFilled.svg";
+import shoppingIcon from "../assets/svg/ShoppingBag.svg";
 
 const HeaderText = styled.span`
    font-size: xx-large;
@@ -63,6 +64,9 @@ function HeaderSection() {
          <HeaderText>Ferrari</HeaderText>
          <LogoIcon src={logoIcon} />
          <BtnsWrapper>
+            <Btn>
+               <Icon src={shoppingIcon} />
+            </Btn>
             <Btn>
                <BtnSuperScript>1</BtnSuperScript>
                <Icon src={wishlistIcon} />
