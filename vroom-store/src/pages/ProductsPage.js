@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import ProductCard from "../components/ProductCard";
 import ProductsPageWrapper from "../styledComponents/PageWrappers/ProductsPageWrapper";
-import { cars } from "../data/CarsData.json";
+import { AppContext } from "../context/AppContext";
 
 function ProductsPage() {
+   const [{ products }] = useContext(AppContext);
    return (
       <ProductsPageWrapper>
-         {cars.map((val, idx) => (
-            <ProductCard id={idx} key={idx} />
+         {products.map((item) => (
+            <ProductCard id={item.id} key={item.id} />
          ))}
       </ProductsPageWrapper>
    );

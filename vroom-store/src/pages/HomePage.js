@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import HomePageWrapper from "../styledComponents/PageWrappers/HomePageWrapper";
 import video from "../assets/videos/homepage-video.mp4";
 import styled from "styled-components";
 import FerrariLogo from "../assets/svg/FerrariLogoColor.svg";
+import { AppContext } from "../context/AppContext";
 const HomePageVid = styled.video`
    position: absolute;
    top: 0;
@@ -33,11 +34,18 @@ const StoreBtn = styled.button`
    }
 `;
 function HomePage() {
+   const [{ navigate }] = useContext(AppContext);
    return (
       <HomePageWrapper>
          <HomePageVid autoplay="" controls="" src={video} loop muted autoPlay />
          <LogoImg src={FerrariLogo} />
-         <StoreBtn>Browse Cars</StoreBtn>
+         <StoreBtn
+            onClick={() => {
+               navigate("/products");
+            }}
+         >
+            Browse Cars
+         </StoreBtn>
       </HomePageWrapper>
    );
 }

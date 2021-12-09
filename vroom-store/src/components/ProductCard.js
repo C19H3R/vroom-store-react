@@ -1,14 +1,17 @@
 //#region local imports
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 //#endregion package imports
 
 //#region local imports
-import { cars } from "../data/CarsData.json";
 import infoIcon from "../assets/svg/Info.svg";
 import cartIcon from "../assets/svg/CartIcon.svg";
 import wishlistFilledIcon from "../assets/svg/WishlistFilled.svg";
+import wishlistBorderIcon from "../assets/svg/WishlistBorder.svg";
+
 import CardWrapper from "../styledComponents/componentWrappers/CardWrapper";
+import { AppContext } from "../context/AppContext";
+import { ADD_TO_CART, TOGGLE_WISHLIST } from "../context/action.types";
 //#endregion
 
 //#region styled Elements
@@ -75,26 +78,40 @@ const CardBtnIcon = styled.img`
 //#endregion
 
 function ProductCard({ id }) {
+   const [{ navigate, products }, dispatch] = useContext(AppContext);
+   const { name, description, price, isWishlisted, image } = products.find(
+      (item) => item.id === id
+   );
    return (
       <CardWrapper>
-         <ProductImg src={cars[id].image} />
+         <ProductImg src={image} />
          <InfoDiv>
-            <ProductTitle>{cars[id].name}</ProductTitle>
-            <ProductDesc>
-               {cars[id].description.substring(0, 150) + "..."}
-            </ProductDesc>
-            <ProductPrice>${100}</ProductPrice>
+            <ProductTitle>{name}</ProductTitle>
+            <ProductDesc>{description.substring(0, 150) + "..."}</ProductDesc>
+            <ProductPrice>${price}</ProductPrice>
             <CardButtonsContainer>
-               <CardBtn>
+               <CardBtn onClick={() => navigate(`/product/${id}`)}>
                   <CardBtnIcon src={infoIcon} />
                   <BtnLabel>Info</BtnLabel>
                </CardBtn>
-               <CardBtn>
+               <CardBtn
+                  onClick={() => {
+                     dispatch({ type: ADD_TO_CART, payload: id });
+                  }}
+               >
                   <CardBtnIcon src={cartIcon} />
                   <BtnLabel>Add To Cart</BtnLabel>
                </CardBtn>
-               <CardBtn>
-                  <CardBtnIcon src={wishlistFilledIcon} />
+               <CardBtn
+                  onClick={() => {
+                     dispatch({ type: TOGGLE_WISHLIST, payload: id });
+                  }}
+               >
+                  <CardBtnIcon
+                     src={
+                        isWishlisted ? wishlistFilledIcon : wishlistBorderIcon
+                     }
+                  />
                   <BtnLabel>Wishlist</BtnLabel>
                </CardBtn>
             </CardButtonsContainer>

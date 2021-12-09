@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useParams } from "react-router";
 import styled from "styled-components";
-import { cars } from "../data/CarsData.json";
+import { ADD_TO_CART } from "../context/action.types";
+import { AppContext } from "../context/AppContext";
 import ProductPageWrapper from "../styledComponents/PageWrappers/ProductPageWrapper";
 
 const CarImg = styled.img`
@@ -35,13 +37,23 @@ const BuyBtn = styled.button`
 `;
 
 function ProductPage() {
+   const [{ products, navigate }, dispatch] = useContext(AppContext);
+   const { carId } = useParams();
+   const cars = products;
    return (
       <ProductPageWrapper>
-         <CarImg src={cars[0].image} />
+         <CarImg src={cars[carId].image} />
          <CarInfoContainer>
-            <CarTitle>{cars[0].name}</CarTitle>
-            <CarDescription>{cars[0].description}</CarDescription>
-            <BuyBtn>Buy Now</BuyBtn>
+            <CarTitle>{cars[carId].name}</CarTitle>
+            <CarDescription>{cars[carId].description}</CarDescription>
+            <BuyBtn
+               onClick={() => {
+                  dispatch({ type: ADD_TO_CART, payload: carId });
+                  navigate("/cart");
+               }}
+            >
+               Buy Now
+            </BuyBtn>
          </CarInfoContainer>
       </ProductPageWrapper>
    );
