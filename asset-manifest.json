@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/vroom-store-react/static/css/main.dc779bed.chunk.css",
+    "main.js": "/vroom-store-react/static/js/main.b665301a.chunk.js",
+    "main.js.map": "/vroom-store-react/static/js/main.b665301a.chunk.js.map",
+    "runtime-main.js": "/vroom-store-react/static/js/runtime-main.961e773e.js",
+    "runtime-main.js.map": "/vroom-store-react/static/js/runtime-main.961e773e.js.map",
+    "static/js/2.b8fb731e.chunk.js": "/vroom-store-react/static/js/2.b8fb731e.chunk.js",
+    "static/js/2.b8fb731e.chunk.js.map": "/vroom-store-react/static/js/2.b8fb731e.chunk.js.map",
+    "index.html": "/vroom-store-react/index.html",
+    "static/css/main.dc779bed.chunk.css.map": "/vroom-store-react/static/css/main.dc779bed.chunk.css.map",
+    "static/js/2.b8fb731e.chunk.js.LICENSE.txt": "/vroom-store-react/static/js/2.b8fb731e.chunk.js.LICENSE.txt",
+    "static/media/CartIcon.0f0cd44e.svg": "/vroom-store-react/static/media/CartIcon.0f0cd44e.svg",
+    "static/media/FerrariLogoColor.f9da473a.svg": "/vroom-store-react/static/media/FerrariLogoColor.f9da473a.svg",
+    "static/media/app.css": "/vroom-store-react/static/media/Roboto-Regular.a8d6ac03.ttf",
+    "static/media/Info.ad858245.svg": "/vroom-store-react/static/media/Info.ad858245.svg",
+    "static/media/LeftArrow.30c31a46.svg": "/vroom-store-react/static/media/LeftArrow.30c31a46.svg",
+    "static/media/Logo.dff2ccfe.svg": "/vroom-store-react/static/media/Logo.dff2ccfe.svg",
+    "static/media/RightArrow.48adbacf.svg": "/vroom-store-react/static/media/RightArrow.48adbacf.svg",
+    "static/media/ShoppingBag.b90b59eb.svg": "/vroom-store-react/static/media/ShoppingBag.b90b59eb.svg",
+    "static/media/WishlistBorder.8d60aaea.svg": "/vroom-store-react/static/media/WishlistBorder.8d60aaea.svg",
+    "static/media/WishlistFilled.66089a9f.svg": "/vroom-store-react/static/media/WishlistFilled.66089a9f.svg",
+    "static/media/homepage-video.b7662a31.mp4": "/vroom-store-react/static/media/homepage-video.b7662a31.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.961e773e.js",
+    "static/js/2.b8fb731e.chunk.js",
+    "static/css/main.dc779bed.chunk.css",
+    "static/js/main.b665301a.chunk.js"
+  ]
+}
