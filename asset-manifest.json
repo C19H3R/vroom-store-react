@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/vroom-store-react/static/css/main.dc779bed.chunk.css",
-    "main.js": "/vroom-store-react/static/js/main.b665301a.chunk.js",
-    "main.js.map": "/vroom-store-react/static/js/main.b665301a.chunk.js.map",
+    "main.js": "/vroom-store-react/static/js/main.1d821ee3.chunk.js",
+    "main.js.map": "/vroom-store-react/static/js/main.1d821ee3.chunk.js.map",
     "runtime-main.js": "/vroom-store-react/static/js/runtime-main.961e773e.js",
     "runtime-main.js.map": "/vroom-store-react/static/js/runtime-main.961e773e.js.map",
-    "static/js/2.b8fb731e.chunk.js": "/vroom-store-react/static/js/2.b8fb731e.chunk.js",
-    "static/js/2.b8fb731e.chunk.js.map": "/vroom-store-react/static/js/2.b8fb731e.chunk.js.map",
+    "static/js/2.167f9622.chunk.js": "/vroom-store-react/static/js/2.167f9622.chunk.js",
+    "static/js/2.167f9622.chunk.js.map": "/vroom-store-react/static/js/2.167f9622.chunk.js.map",
     "index.html": "/vroom-store-react/index.html",
     "static/css/main.dc779bed.chunk.css.map": "/vroom-store-react/static/css/main.dc779bed.chunk.css.map",
-    "static/js/2.b8fb731e.chunk.js.LICENSE.txt": "/vroom-store-react/static/js/2.b8fb731e.chunk.js.LICENSE.txt",
+    "static/js/2.167f9622.chunk.js.LICENSE.txt": "/vroom-store-react/static/js/2.167f9622.chunk.js.LICENSE.txt",
     "static/media/CartIcon.0f0cd44e.svg": "/vroom-store-react/static/media/CartIcon.0f0cd44e.svg",
     "static/media/FerrariLogoColor.f9da473a.svg": "/vroom-store-react/static/media/FerrariLogoColor.f9da473a.svg",
     "static/media/app.css": "/vroom-store-react/static/media/Roboto-Regular.a8d6ac03.ttf",
@@ -24,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.961e773e.js",
-    "static/js/2.b8fb731e.chunk.js",
+    "static/js/2.167f9622.chunk.js",
     "static/css/main.dc779bed.chunk.css",
-    "static/js/main.b665301a.chunk.js"
+    "static/js/main.1d821ee3.chunk.js"
   ]
 }
